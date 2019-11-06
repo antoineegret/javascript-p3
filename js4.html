@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="password">Votre mot de passe : </label><input type="password" name="password" id="password" />
+    <label for="confirmPassword">Confirmez : </label><input onfocus="testValidation()" type="password" name="confirmPassword" id="confirmPassword" />
+    <button type="button" name="button" >Vérification</button>
+  </form>
+  <script type="text/javascript">
+  function testValidation()
+  {
+    var x, y;
+    x = document.getElementById('password').value;
+    y = document.getElementById('confirmPassword').value;
+    if (x != y) {
+      document.getElementById('password').style.border = "2px solid red";
+      document.getElementById('confirmPassword').style.border = "2px solid red";
+    }
+    else if (x == y) {
+      document.getElementById('password').style.border = "2px solid green";
+      document.getElementById('confirmPassword').style.border = "2px solid green";
+    }
+  }
+  </script>
+</body>
+</html>
